@@ -1,0 +1,35 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+#RewriteCond %{HTTPS} off
+#RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+DirectoryIndex index.php index.html
+RewriteBase /plumber2/
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+
+RewriteCond %{THE_REQUEST} \ /+([^\?]+)\.php\?pid=([0-9]+)
+RewriteRule ^ /%1/%2? [L,R]
+
+RewriteCond %{THE_REQUEST} \ /+([^\?]+)\.php(\ |$)
+RewriteRule ^ /%1 [L,R]
+RewriteRule ^location/?$ location.php [NC,L]
+RewriteRule ^sewer-line-repair-([a-zA-Z0-9_\-+!*']+)/?$    sewer-line-repair.php?a=$1     [NC,L]
+RewriteRule ^plumbing-installation-([a-zA-Z0-9_\-+!*']+)/?$    plumbing-installation.php?a=$1    [NC,L]
+RewriteRule ^water-heater-repair-([a-zA-Z0-9_\-+!*']+)/?$    water-heater-repair.php?a=$1    [NC,L]
+RewriteRule ^toilet-pump-service-([a-zA-Z0-9_\-+!*']+)/?$    toilet-pump-service.php?a=$1    [NC,L]
+RewriteRule ^roof-leaking-repair-([a-zA-Z0-9_\-+!*']+)/?$    roof-leaking-repair.php?a=$1    [NC,L]
+RewriteRule ^location-([a-zA-Z0-9_\-+!*']+)/?$    index.php?a=$1    [NC,L]
+RewriteRule ^clogged-drain-([a-zA-Z0-9_\-+!*']+)/?$    clogged-drain.php?a=$1    [NC,L]
+RewriteRule ^clogged-toilet-([a-zA-Z0-9_\-+!*']+)/?$    clogged-toilet.php?a=$1    [NC,L]
+RewriteRule ^pipe-leaking-([a-zA-Z0-9_\-+!*']+)/?$    pipe-leaking.php?a=$1    [NC,L]
+RewriteRule ^pipe-burst-([a-zA-Z0-9_\-+!*']+)/?$    pipe-burst.php?a=$1    [NC,L]
+
+
+
+</IfModule>

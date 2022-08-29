@@ -1,0 +1,31 @@
+visual
+======
+- create a simple logo (icon + word)
+- background use (http://aberdeenwargames.club/wp-content/uploads/2018/04/plumber-burleson-tx-drain-cleaning-plumbing-companies-burleson-tx.jpg)
+  (apply blur)
+
+- our works - crop thumbnails to 200x200
+
+content
+=======
+- Roman Empire section - replace with testimony
+  caption - "Fast & Prompt Service. Very reasonable Rates" - Azlina Mohd.
+  Chg cup icon to Photo (Malay Girl)
+
+- Who we are - remove the 5 ppl/name/title
+
+- remove our feedback/more blog
+
+- on each individual services page - include the the contact form (e.g. incl in footer)
+
+- add new menu item "Locations" - similar to "http://serviceaircond.com.my/about.php"
+
+- between services & our works add in a new section "What We Handle"
+  - Clogged Drains / Clogged Toilet / Pipe Leaking / Pipe Burst
+
+optimize
+========
+- every page only and must have 1 <h1>
+- <title> include the keyword
+- meta keywords
+- rename file. e.g. "sewer-line-repair.php"
